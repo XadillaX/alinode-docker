@@ -1,2 +1,3 @@
-# alinode-docker
-Dockfile for alinode.
+# AliNode Docker
+
+Dockerfile for alinode.
