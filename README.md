@@ -2,6 +2,18 @@
 
 Dockerfile for alinode.
 
+## Docker Hub
+
+You may use this Dockerfile via Docker Hub.
+
+The repo is [here](https://hub.docker.com/r/xadillax/alinode/).
+
+And the `docker pull` command is:
+
+```sh
+$ docker pull xadillax/alinode
+```
+
 ## With AgentX
 
 This docker may use with [AgentX](https://github.com/aliyun-node/agentx) together.
