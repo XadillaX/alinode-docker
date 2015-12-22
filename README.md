@@ -1,4 +1,4 @@
-# AliNode Docker
+# Alinode Docker
 
 Dockerfile for alinode.
 
@@ -6,12 +6,12 @@ Dockerfile for alinode.
 
 You may use this Dockerfile via Docker Hub.
 
-The repo is [here](https://hub.docker.com/r/xadillax/alinode/).
+The repo is [here](https://hub.docker.com/r/alinode/alinode-docker/).
 
 And the `docker pull` command is:
 
 ```sh
-$ docker pull xadillax/alinode
+$ docker pull alinode/alinode-docker
 ```
 
 ## With AgentX
