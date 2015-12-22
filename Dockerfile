@@ -11,7 +11,7 @@ RUN yum install wget -y
 RUN yum install curl git python tree gcc gcc-c++ make openssl-devel -y
 
 ENV HOME /root
-ENV ALINODE_VERSION 1.1.0
+ENV ALINODE_VERSION 1.2.1
 ENV TNVM_DIR /root/.tnvm
 RUN mkdir /tmp/node_log
 
