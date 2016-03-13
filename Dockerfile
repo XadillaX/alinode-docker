@@ -1,19 +1,13 @@
-FROM ubuntu:14.04
+FROM buildpack-deps:jessie
 
 USER root
 
-# Change mirrors
-# RUN apt-get install wget -y
-
-# Install required software
-# RUN yum install curl git python tree gcc gcc-c++ make openssl-devel -y
-
 ENV HOME /root
-ENV ALINODE_VERSION 1.2.2
+ENV ALINODE_VERSION 1.5.2
 ENV TNVM_DIR /root/.tnvm
 RUN mkdir /tmp/node_log
 
-# Install alinode v1.1.0 (node 4.2.2)
+# Install alinode v1.5.2 (node 4.4.0)
 RUN wget -qO- https://raw.githubusercontent.com/aliyun-node/tnvm/master/install.sh | bash 
 RUN source $HOME/.bashrc && \
         tnvm install "alinode-v$ALINODE_VERSION" && \
