@@ -11,7 +11,7 @@ The repo is [here](https://hub.docker.com/r/alinode/alinode-docker/).
 And the `docker pull` command is:
 
 ```sh
-$ docker pull alinode/alinode-docker
+$ docker pull xadillax/alinode
 ```
 
 ## With AgentX && Run app.js
