@@ -1,4 +1,4 @@
-FROM buildpack-deps:trusty
+FROM buildpack-deps:xenial
 
 USER root
 
@@ -22,4 +22,4 @@ RUN git clone https://github.com/aliyun-node/commands.git /usr/local/src/alinode
 RUN rm /bin/sh && mv /bin/sh_ /bin/sh
 
 COPY docker-entrypoint.sh /
-ENTRYPOINT ["/docker-entrypoint.sh"]
+ENTRYPOINT [ "/docker-entrypoint.sh" ]
