@@ -14,7 +14,7 @@ if [ "$APP_ID" != "" ] && [ "$APP_SECRET" != "" ]; then
         \"heartbeatInterval\": 60,\n
         \"reconnectDelay\": 10,\n
         \"reportInterval\": 60,\n
-        \"logdir\": \"/tmp/node_log/\",\n
+        \"logdir\": \"$ALINODE_LOGDIR\",\n
         \"cmddir\": \"/root/.tnvm/versions/alinode/v$ALINODE_VERSION/lib/node_modules/commandx\",\n
         \"error_log\": [" > /.agentx.json
 
