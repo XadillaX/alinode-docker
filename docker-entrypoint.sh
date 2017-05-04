@@ -1,9 +1,6 @@
 #!/bin/bash
 set -e
 
-export ENABLE_NODE_LOG=YES
-export NODE_LOG_DIR=/tmp/node_log
-
 source $HOME/.bashrc
 
 if [ "$APP_ID" != "" ] && [ "$APP_SECRET" != "" ]; then
@@ -14,7 +11,7 @@ if [ "$APP_ID" != "" ] && [ "$APP_SECRET" != "" ]; then
         \"heartbeatInterval\": 60,\n
         \"reconnectDelay\": 10,\n
         \"reportInterval\": 60,\n
-        \"logdir\": \"$ALINODE_LOGDIR\",\n
+        \"logdir\": \"$NODE_LOG_DIR\",\n
         \"cmddir\": \"/root/.tnvm/versions/alinode/v$ALINODE_VERSION/lib/node_modules/commandx\",\n
         \"error_log\": [" > /.agentx.json
 
