@@ -8,10 +8,9 @@ RUN mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backu
 RUN wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 
 ENV HOME /root
-ENV ALINODE_VERSION 2.1.2
+ENV ALINODE_VERSION 2.1.3 # Install alinode v2.1.3 (node v6.10.3)
 ENV TNVM_DIR /root/.tnvm
 
-# Install alinode v2.1.2 (node v6.10.2)
 RUN wget -O- https://raw.githubusercontent.com/aliyun-node/tnvm/master/install.sh | bash
 
 RUN source $HOME/.bashrc \
@@ -20,4 +19,7 @@ RUN source $HOME/.bashrc \
     && npm install -g agentx commandx --registry=https://registry.npm.taobao.org
 
 COPY docker-entrypoint.sh /
+
+COPY agentx.default.js $HOME/
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
