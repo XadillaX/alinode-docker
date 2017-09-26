@@ -1,6 +1,8 @@
 'use strict';
 
-module.exports = {
+const fs = require('fs');
+
+const defaults = {
   "server": "agentserver.alinode.aliyun.com:8080",
   "appid": `${process.env.APP_ID}`,
   "secret": `${process.env.APP_SECRET}`,
@@ -11,3 +13,8 @@ module.exports = {
   "cmddir": `/root/.tnvm/versions/alinode/v${process.env.ALINODE_VERSION}/lib/node_modules/commandx`,
   "error_log": []
 };
+
+const custom = require(`${process.env.HOME}/alinode-app.json`);
+
+const output = JSON.stringify(Object.assign(defaults, custom));
+fs.writeFileSync(`${process.env.HOME}/agentx.json`, output);
