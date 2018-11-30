@@ -5,6 +5,6 @@ BASE=$2
 
 cp ./$VER/$BASE/Dockerfile ./
 
-docker build -t alinode .
+docker build -t alinode-$VER-$BASE .
 
 

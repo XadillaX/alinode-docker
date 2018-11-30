@@ -3,7 +3,7 @@ FROM debian:jessie-slim
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
-ENV ALINODE_VERSION 2.5.2
+ENV ALINODE_VERSION 2.7.0
 ENV ARCH=x64
 ENV ENABLE_NODE_LOG YES
 ENV NODE_LOG_DIR /tmp
