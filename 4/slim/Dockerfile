@@ -3,7 +3,7 @@ FROM debian:jessie-slim
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
-ENV ALINODE_VERSION 4.6.0
+ENV ALINODE_VERSION 4.6.1
 ENV ARCH=x64
 ENV ENABLE_NODE_LOG YES
 ENV NODE_LOG_DIR /tmp
@@ -28,7 +28,7 @@ RUN set -x \
 COPY ./default.config.js $HOME
 COPY ./start-agenthub.sh /
 
-ENV YARN_VERSION 1.10.1
+ENV YARN_VERSION 1.12.3
 
 RUN set -ex \
   && for key in \

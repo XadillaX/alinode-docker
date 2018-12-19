@@ -19,7 +19,7 @@ VPC: docker pull registry-vpc.cn-hangzhou.aliyuncs.com/aliyun-node/alinode:[imag
 ## build images
 
 ```shell
-./build.sh 2/3/4 jessie/slim
+./build.sh 2/3/4 jessie/slim/stretch
 ```
 
 e.g:
@@ -33,6 +33,9 @@ e.g:
 
 ```
 
+Image with tag alinode-2/3/4-jessie/slim/stretch will be created.
+
+
 ## verify the image
 
 ### provide **APP_ID** and **APP_SECRET** via environment variables
@@ -40,7 +43,7 @@ e.g:
 ```shell
 cd test
 docker build -t alinodetest .
-docker run -it -p 3333:3333 -e "APP_ID=_YOUR_APP_ID" -e "APP_SECRET=_YOUR_APP_SECRET" alinodetest
+docker run -d -p 3333:3333 -e "APP_ID=_YOUR_APP_ID" -e "APP_SECRET=_YOUR_APP_SECRET" alinodetest
 ```
 
 ### provide **APP_ID** and **APP_SECRET** via config file
@@ -50,11 +53,10 @@ docker run -it -p 3333:3333 -e "APP_ID=_YOUR_APP_ID" -e "APP_SECRET=_YOUR_APP_SE
 cd test
 # provide APP_ID and APP_SECRET via app-config.json
 docker build -t alinodetest .
-docker run -it -p 3333:3333 alinodetest
+docker run -d -p 3333:3333 alinodetest
 ```
 
 Then check from [here](https://node.console.aliyun.com).
-
 
 ## Contribute
 

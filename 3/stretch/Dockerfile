@@ -3,7 +3,7 @@ FROM buildpack-deps:stretch
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
-ENV ALINODE_VERSION 3.13.0
+ENV ALINODE_VERSION 3.13.1
 ENV ARCH=x64
 ENV ENABLE_NODE_LOG YES
 ENV NODE_LOG_DIR /tmp
