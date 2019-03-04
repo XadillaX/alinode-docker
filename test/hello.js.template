@@ -1,0 +1,16 @@
+'use strict';
+
+const http = require('http');
+var cntr = 0;
+
+var PORT = TEST_PORT;
+
+http.createServer(function (req, res) {
+  cntr++;
+  res.end('hello from alinode docker: ' + cntr + '\n');
+}).listen(PORT);
+
+console.log('hello at port: ' + PORT);
+console.log('You may check your applicaiton from node.console.aliyun.com.')
+console.log('Instance id: ' + process.env.HOSTNAME);
+console.log('process.alinode: ' + process.alinode);
